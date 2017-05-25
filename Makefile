@@ -18,3 +18,6 @@ install_requirements:
 
 run_locust_test:
 	locust --no-web --clients=100 --hatch-rate=10 --num-request=5000 --locustfile=locust/locust_test.py
+
+run_multi_mechanize_test:
+	multimech-run multimech

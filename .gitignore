@@ -91,3 +91,6 @@ ENV/
 
 # IDE
 .idea/
+
+#multi-mechanize
+*.jtl
