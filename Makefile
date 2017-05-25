@@ -1,4 +1,4 @@
-VENV_PATH  := .smart_notif_venv
+VENV_PATH  := .performance_venv
 
 all: clean_virtualenv create_virtualenv activate_virtualenv install_requirements
 
@@ -16,3 +16,5 @@ activate_virtualenv:
 install_requirements:
 	pip install -r requirements.txt
 
+run_locust_test:
+    locust --no-web --clients=100 --hatch-rate=10 --num-request=5000 --locustfile=locust/locust_test.py
